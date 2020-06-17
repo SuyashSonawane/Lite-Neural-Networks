@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lite Neural Networks</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <img src="./images/icon.png" alt="" height="100px" class="m-5" />
+          <h1 class="display-4 mb-5">
+            Lite Neural Networks <tt class="small">v-0</tt>
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-justify">
+          <p class="display-5">
+            A small lite weight JS library for your fun project
+          </p>
+          <p class="display-5">
+            Inspried by Tensorflow.js but faster in terms of multiple Neural
+            Networks,TF.js works superb when it comes to single Neural Network
+            and allows hardware acceleration. But when used for creating
+            multiple Neural Networks for applications under Genetic Algorithm or
+            Multiple Simulation it kind of lags or consume high resources.
+          </p>
+          <p class="display-5">
+            Lite Neural Networks Library allows you to create multiple Neural
+            Networks and perform opeartions on them iteratively
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="cdn">
+            <p onclick="CopyToClipboard('hidden')">
+              https://firebasestorage.googleapis.com/v0/b/website-d2f19.appspot.com/o/nn-v0.js?alt=media&token=cd7b6c3b-0796-411c-a49d-89f22277119a
+            </p>
+          </div>
+          <p id="hidden">
+            < script src="https://firebasestorage.googleapis.com/v0/b/website-d2f19.appspot.com/o/nn-v0.js?alt=media&token=cd7b6c3b-0796-411c-a49d-89f22277119a"></ script >
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-12">
+          <p><u>Creating Neural Network</u></p>
+          <div class="code">
+            // Creating a Simple Neural Network with 2 inputs 3 hidden nodes and
+            1 output node. <br />
+            <code>
+              let nn = new NeuralNetwork([2,3,1]);
+            </code>
+            <br />
+            <br />
+            // Creating a Neural Network with 2 inputs 3 hidden nodes, 5 hiddden
+            nodes, 10 hidden nodes and 10 output node. <br />
+            <code>
+              let nn = new NeuralNetwork([2,3,5,10,10]);
+            </code>
+          </div>
+          <br />
+          <p><u>Training Neural Network</u></p>
+          <div class="code">
+            // The input data is expected to be JSON object like <br />
+            <code>
+              let data = [ { X: [1, 2, 3], Y: [1], }, , , , , { X: [7, 8, 9], Y:
+              [7], }, ];
+            </code>
+            <br />
+            <br />
+            // The training process can be started using the fit() function
+            <br />
+            <code>
+              let epochs = 1000 <br />
+              let l_rate = 0.1 // default learning rate is set to 0.01 <br />
+              let verbose = 1 <br />
+              nn.fit(data , epochs , l_rate? , verbose? )
+            </code>
+          </div>
+          <br />
+          <p><u>Predictions using Neural Network</u></p>
+          <div class="code">
+            // For prediction predict() function can be used <br />
+            <code>
+              let X_test = [1,2,3] <br />
+              nn.predict(X_test) // returns 1d array
+            </code>
+          </div>
+          <br />
+
+          <p><u>Smaple Program XOR Implementation</u></p>
+          <div class="code">
+            <code>
+              let data = [ { X: [0, 1], Y: [1], }, { X: [1, 0], Y: [1], }, { X:
+              [0, 0], Y: [0], }, { X: [1, 1], Y: [0], }, ]; <br />
+              <br />
+              let nn = new NeuralNetwork([2, 5, 1]); <br />
+              nn.fit(data, 50000, 0.1);
+              <br />
+              <br />
+              console.log(nn.predict([0, 1])); <br />
+              console.log(nn.predict([1, 1])); <br />
+              console.log(nn.predict([1, 0])); <br />
+              console.log(nn.predict([0, 0]));<br />
+            </code>
+          </div>
+          <br />
+          <center>
+            <img src="./images/ss.png" alt="" class="img-fluid" />
+          </center>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-12 text-justify">
+          <p class="display-5">
+            This is just a fun project in which I tried to create a simple and
+            light weight Neural Network Library
+          </p>
+          <p class="display-5">
+            It's actually still in development but can be used for your fun
+            projects, I'll be pushing change logs on this website and also on my
+            Github repo
+            <a
+              href="https://github.com/SuyashSonawane/Lite-Neural-Networks"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lite Neural Network</a
+            >
+          </p>
+          <p class="display-5">
+            If you find any bugs or have any ideas do create a issue on this
+            <a
+              href="https://github.com/SuyashSonawane/Lite-Neural-Networks/issues/new/choose"
+              >link</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-group">
+            <a
+              href="http://github.com/SuyashSonawane"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <li class="list-group-item">
+                <ion-icon name="logo-github"></ion-icon> &nbsp; SuyashSonawane
+              </li></a
+            >
+            <a
+              href="https://www.linkedin.com/in/suyash-sonawane-44661417b/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <li class="list-group-item">
+                <ion-icon name="logo-linkedin"></ion-icon>&nbsp; Suyash Y
+                Sonawane
+              </li></a
+            >
+            <a
+              href="https://twitter.com/SuyashYSonawane"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <li class="list-group-item">
+                <ion-icon name="logo-twitter"></ion-icon> &nbsp; Suyash Y
+                Sonawane
+              </li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br /><br />
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
+    integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> 
+  <script src="./main.js"></script>
+</html>

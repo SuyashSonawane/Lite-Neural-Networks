@@ -1,0 +1,25 @@
+@import "https://fonts.googleapis.com/css?family=Roboto";
+
+body {
+  font-family: "Roboto";
+  font-size: 22px;
+}
+#hidden {
+  display: none;
+}
+.cdn {
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.075);
+  font-size: 15px;
+  text-align: center;
+  height: 40px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.code {
+  background-color: rgba(0, 0, 0, 0.075);
+  padding: 10px 10px;
+  color: #495057;
+}
