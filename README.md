@@ -1,5 +1,7 @@
 # Lite-Neural-Networks
-
+[![Version badge](https://img.shields.io/badge/Version-0.00-green)](https://suyashsonawane.github.io/Lite-Neural-Networks/)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/SuyashSonawane/Lite-Neural-Networks/)
 ---
 
 A small lite weight JS library for your fun project
