@@ -1,0 +1,23 @@
+{
+  "name": "lnn.js",
+  "version": "1.0.2",
+  "description": "A small lite weight Neural Network JS library for your fun project",
+  "main": "package/index.js",
+  "directories": {
+    "package":"package"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["lnn","neural network","lite neural network"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuyashSonawane/Lite-Neural-Networks.git"
+  },
+  "author": "SuyashSonawane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SuyashSonawane/Lite-Neural-Networks/issues"
+  },
+  "homepage": "https://suyashsonawane.me/Lite-Neural-Networks/"
+}
